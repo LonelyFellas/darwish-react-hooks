@@ -11,9 +11,9 @@ function App() {
     // Infinity
   return (
     <div className="App">
-      <h1>Hello, {isBool ? 'Darwish' : 'aLin'}</h1>
+      <h1>Hello, {isBlanks<any[]>([]) ? 'true' : 'false'}</h1>
 
-      <button onClick={() => setIsBool(isBlanks(Infinity))}>Change State</button>
+      <button onClick={() => setIsBool(!isBool)}>Change State</button>
     </div>
   );
 }

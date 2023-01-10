@@ -1,19 +1,16 @@
 import React from 'react';
 import './App.css';
-import isBlanks from "./functions/isBlanks";
+// import { FrequencyMap } from "./functions/FrequencyMap"
+// import TestUseBattery from "./hooks/useBattery/UseBattery.demo"
+import UseHoverDemo from './hooks/useHover/UseHover.demo';
+
 function App() {
-  const [isBool, setIsBool] = React.useState(false);
-    // number
-    // string
-    // undefined
-    // null
-    // NaN
-    // Infinity
+
+  // const map = new FrequencyMap([1, 2, 3, 4, 1]);
+  
   return (
     <div className="App">
-      <h1>Hello, {isBlanks<any[]>([]) ? 'true' : 'false'}</h1>
-
-      <button onClick={() => setIsBool(!isBool)}>Change State</button>
+      <UseHoverDemo />
     </div>
   );
 }

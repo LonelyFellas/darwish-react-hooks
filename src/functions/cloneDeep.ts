@@ -2,7 +2,8 @@
  *
  * @param data 实现一个深拷贝。
  */
-const cloneDeep: <T>(data: T) => T | { [k: string]: any; } = (data) => {
+// @ts-ignore
+const cloneDeep: <T>(data: T) => T = (data) => {
     if (Array.isArray(data)) {
         return data.map((child) => cloneDeep(child))
     }

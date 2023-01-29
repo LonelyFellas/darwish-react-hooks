@@ -9,7 +9,7 @@ const useStorage: (type: 'localStorage' | 'sessionStorage', defaultKey?: string)
 } = (type, defaultKey) => {
 
   const [isSuccess, setIsSuccess] = React.useState(false);
-  const dispatchErrFn = useDisplayDevError('缓存没有保存成功');
+  const dispatchErrFn = useDisplayDevError();
 
   const get = React.useCallback((key?: string, isErrorMsg?: boolean) => {
     let storageKey = storageKeyBoolFn(key)
@@ -34,7 +34,7 @@ const useStorage: (type: 'localStorage' | 'sessionStorage', defaultKey?: string)
         setIsSuccess(true)
       } else {
         setIsSuccess(false)      
-        dispatchErrFn()
+        dispatchErrFn('缓存没有保存成功')
       }
     }
 
@@ -59,7 +59,7 @@ const useStorage: (type: 'localStorage' | 'sessionStorage', defaultKey?: string)
   const errorBool = (setKey?: string) => {
     let bool = false;
     if (typeof setKey === 'undefined' && typeof defaultKey === 'undefined') {
-      dispatchErrFn()
+      dispatchErrFn('缓存没有保存成功')
       setIsSuccess(false);
       bool = true;
     }

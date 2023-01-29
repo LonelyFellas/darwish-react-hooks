@@ -5,15 +5,18 @@ import './App.css';
 // import UseHoverDemo from './hooks/useHover/UseHover.demo';
 // import UseTimeoutDemo from "./hooks/useTimeout/UseTimeout.demo"
 // import UseSessionStorageDemo from './hooks/useStorage/useStorage.demo';
-import UseUpdateEffectDemo from './hooks/useUpdateEffect/UseUpdateEffect.Demo';
-
+// import UseUpdateEffectDemo from './hooks/useUpdateEffect/UseUpdateEffect.Demo';
+// import UseDefaultDemo from './hooks/useDefault/UseDefault.demo';
+// import useTitle from './hooks/useTitle';
+// import UseFaviconDemo from './hooks/useFavicon/UseFavicon.demo';
+// import UseSizeDemo from './hooks/useSize/UseSize.demo';
+// import UseCounterDemo from './hooks/useCounter/UseCounter.demo';
+import UseSetStateDemo from './hooks/useSetState/UseSetState.demo';
 function App() {
 
-  // const map = new FrequencyMap([1, 2, 3, 4, 1]);
-  
   return (
     <div className="App">
-      <UseUpdateEffectDemo />
+      <UseSetStateDemo />
     </div>
   );
 }

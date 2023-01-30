@@ -1,16 +1,30 @@
 import useToggle from ".";
 
 const UseToggleDemo = () => {
-  const [on, toggle] = useToggle(true);
+  const [state, { toggle, set, setLeft, setRight }] = useToggle('Hello', 'World');
 
   return (
     <div>
-      <div>{on ? 'ON' : 'OFF'}</div>
-      <button onClick={toggle}>Toggle</button>
-      <button onClick={() => toggle(true)}>set ON</button>
-      <button onClick={() => toggle(false)}>set OFF</button>
+      <p>Effects：{state}</p>
+      <p>
+        <button type="button" onClick={toggle}>
+          Toggle
+        </button>
+        <button type="button" onClick={() => set('Hello')} style={{ margin: '0 8px' }}>
+          Set Hello
+        </button>
+        <button type="button" onClick={() => set('World')}>
+          Set World
+        </button>
+        <button type="button" onClick={setLeft} style={{ margin: '0 8px' }}>
+          Set Left
+        </button>
+        <button type="button" onClick={setRight}>
+          Set Right
+        </button>
+      </p>
     </div>
   )
 }
 
-export default UseToggleDemo
+export default UseToggleDemo;

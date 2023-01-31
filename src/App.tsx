@@ -11,13 +11,14 @@ import './App.css';
 // import UseFaviconDemo from './hooks/useFavicon/UseFavicon.demo';
 // import UseSizeDemo from './hooks/useSize/UseSize.demo';
 // import UseCounterDemo from './hooks/useCounter/UseCounter.demo';
-import UseToggleDemo from './hooks/useToggle/UseToggle.demo';
-import UseSetStateDemo from './hooks/useSetState/UseSetState.demo';
+// import UseToggleDemo from './hooks/useToggle/UseToggle.demo';
+// import UseSetStateDemo from './hooks/useSetState/UseSetState.demo';
+import UseMapDemo from './hooks/useMap/UseMap.demo';
 function App() {
 
   return (
     <div className="App">
-      <UseToggleDemo />
+      <UseMapDemo />
     </div>
   );
 }

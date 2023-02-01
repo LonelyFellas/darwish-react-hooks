@@ -14,11 +14,12 @@ import './App.css';
 // import UseToggleDemo from './hooks/useToggle/UseToggle.demo';
 // import UseSetStateDemo from './hooks/useSetState/UseSetState.demo';
 import UseMapDemo from './hooks/useMap/UseMap.demo';
+import UseListDemo from './hooks/useList/UseList.demo';
 function App() {
 
   return (
     <div className="App">
-      <UseMapDemo />
+      <UseListDemo />
     </div>
   );
 }

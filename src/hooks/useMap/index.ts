@@ -16,7 +16,7 @@ const useMap = <T extends object = any>(defaultMapValue: T = {} as T) => {
     };
 
     const setAll = <U extends T>(allValue: U) => {
-      setMapState((prev) => ({ ...prev, ...allValue }));
+      setMapState(allValue);
     };
 
     const remove = <K extends keyof T>(removeValue: K) => {
@@ -31,7 +31,6 @@ const useMap = <T extends object = any>(defaultMapValue: T = {} as T) => {
     };
 
     return {
-      get: React.useCallback((key: keyof T) => mapState[key], []),
       set,
       setAll,
       remove,
@@ -39,7 +38,12 @@ const useMap = <T extends object = any>(defaultMapValue: T = {} as T) => {
     };
   }, []);
 
-  return [mapState, actions] as const;
+  const utils = {
+    get: React.useCallback((key: keyof T) => mapState[key], []),
+    ...actions
+  }
+
+  return [mapState, utils] as const;
 };
 
 export default useMap;

@@ -35,10 +35,7 @@ function useList<T>(initialNumber: T[]): [T[], IUseListUtil<T>] {
       });
     };
     const updateAt = (index: number, updateValue: any) => {
-      setState((prev) => {
-        prev.splice(index, 1, updateValue);
-        return prev;
-      });
+      setState(prev => prev.map((item, i) => i === index ? updateValue: item))
     };
 
     const insertAt = () => {};
@@ -50,7 +47,9 @@ function useList<T>(initialNumber: T[]): [T[], IUseListUtil<T>] {
     const upsert = () => {};
 
     const sort = (callbackFn: (a: T, b: T) => number) => {
-      setState((prev) => prev.sort(callbackFn));
+      setState((prev) => {
+        return structuredClone(prev).sort(callbackFn)
+      });
     };
 
     const filter = (
@@ -61,7 +60,7 @@ function useList<T>(initialNumber: T[]): [T[], IUseListUtil<T>] {
 
     const removeAt = (index: number) => {
       setState((prev) => {
-        const cloneData = cloneDeep(prev)
+        const cloneData = structuredClone(prev)
         cloneData.splice(index, index + 1);
         return cloneData;
       });

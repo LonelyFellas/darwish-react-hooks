@@ -5,9 +5,9 @@ type IUseListUtil<T> = {
   set: (value: T[]) => void;
   push: (value: any) => void;
   updateAt: (index: number, value: any) => void;
-  insertAt: () => void;
+  insertAt: (index: number, insertValue: any) => void;
   update: () => void;
-  updateFirst: () => void;
+  updateFirst: (updateValue: any) => void;
   upsert: () => void;
   sort: (callbackFn: (a: T, b: T) => number) => void;
   filter: (
@@ -38,11 +38,19 @@ function useList<T>(initialNumber: T[]): [T[], IUseListUtil<T>] {
       setState(prev => prev.map((item, i) => i === index ? updateValue: item))
     };
 
-    const insertAt = () => {};
+    const insertAt = (index: number, insertValue: any) => {
+      setState( prev => {
+        const cloneData = structuredClone(prev)
+        cloneData.splice(index, 0, insertValue)
+        return cloneData;
+      })
+    };
 
     const update = () => {};
 
-    const updateFirst = () => {};
+    const updateFirst = (updateValue: any) => {
+      setState(prev => prev.map((item, index) => index === 0 ? updateValue : item ))
+    };
 
     const upsert = () => {};
 

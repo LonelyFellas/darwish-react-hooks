@@ -5,8 +5,6 @@ const useUpdateEffect: typeof React.useEffect = (effect, deps) => {
 
   React.useEffect(() => {
     if (!firstMountState) {
-      console.log("firstMountState", firstMountState);
-      
       return effect()
     }
   }, deps)

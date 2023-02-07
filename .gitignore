@@ -3,4 +3,9 @@
 
 # Dependency directories
 node_modules/
+node_modules/.cache
 .vscode
+./.idea
+/package-lock.json
+/yarn.lock
+/.history

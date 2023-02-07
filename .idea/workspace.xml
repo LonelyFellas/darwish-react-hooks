@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d732dad-00f6-4f58-b716-3c22ea2faae2" name="Changes" comment="add useLatest hook">
+    <list default="true" id="1d732dad-00f6-4f58-b716-3c22ea2faae2" name="Changes" comment="add useUpdateEffectOnce hook">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/tsconfig.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,28 +79,8 @@
       <workItem from="1675010195875" duration="1237000" />
       <workItem from="1675084618894" duration="3524000" />
       <workItem from="1675340846730" duration="597000" />
-      <workItem from="1675606752580" duration="1900000" />
-    </task>
-    <task id="LOCAL-00002" summary="npm dep">
-      <created>1664284919964</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1664284919964</updated>
-    </task>
-    <task id="LOCAL-00003" summary="isBlank functions first step done">
-      <created>1664318368134</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1664318368134</updated>
-    </task>
-    <task id="LOCAL-00004" summary="isBlank function done!">
-      <created>1664370840739</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1664370840739</updated>
+      <workItem from="1675606752580" duration="4024000" />
+      <workItem from="1675942460715" duration="76000" />
     </task>
     <task id="LOCAL-00005" summary="isBlank function done!">
       <created>1664371046985</created>
@@ -410,7 +404,28 @@
       <option name="project" value="LOCAL" />
       <updated>1675690037280</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="add useLatest hook">
+      <created>1675692848654</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1675692848654</updated>
+    </task>
+    <task id="LOCAL-00052" summary="add useUpdateEffectOnce hook">
+      <created>1675777898271</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1675777898272</updated>
+    </task>
+    <task id="LOCAL-00053" summary="add useUpdateEffectOnce hook">
+      <created>1675778064054</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1675778064055</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,6 +475,7 @@
     <MESSAGE value="add useList hook" />
     <MESSAGE value="add useUpdate hook" />
     <MESSAGE value="add useLatest hook" />
-    <option name="LAST_COMMIT_MESSAGE" value="add useLatest hook" />
+    <MESSAGE value="add useUpdateEffectOnce hook" />
+    <option name="LAST_COMMIT_MESSAGE" value="add useUpdateEffectOnce hook" />
   </component>
 </project>

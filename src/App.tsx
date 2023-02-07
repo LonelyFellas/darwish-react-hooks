@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useDeferredValue } from 'react';
 import './App.css';
 // import { FrequencyMap } from "./functions/FrequencyMap"
 // import TestUseBattery from "./hooks/useBattery/UseBattery.demo"
@@ -13,15 +13,31 @@ import './App.css';
 // import UseCounterDemo from './hooks/useCounter/UseCounter.demo';
 // import UseToggleDemo from './hooks/useToggle/UseToggle.demo';
 // import UseSetStateDemo from './hooks/useSetState/UseSetState.demo';
-import UseMapDemo from './hooks/useMap/UseMap.demo';
-import UseListDemo from './hooks/useList/UseList.demo';
-function App() {
+// import UseMapDemo from './hooks/useMap/UseMap.demo';
+// import UseListDemo from './hooks/useList/UseList.demo';
+// import UseEffectOnceDemo from './hooks/useUpdateEffectOnce/UseUpdateEffectOnce.demo';
 
+function App() {
+  const [value, setValue] = React.useState('');
+  const derValue = useDeferredValue(value)
   return (
     <div className="App">
-      <UseListDemo />
+      {/* <UseEffectOnceDemo /> */}
+      <input placeholder="please input something" onChange={(e) => setValue(e.target.value)}/>
+
+      <LongList derValue={derValue}/>
     </div>
   );
 }
 
 export default App;
+
+const LongList = memo(({derValue}: {derValue: string}) => {
+
+
+  return   <ul>
+      {Array(50000).fill('a').map((item, index) => (
+        <li key={index}>{derValue}</li>
+      ))}
+    </ul>
+})

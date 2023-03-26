@@ -16,28 +16,31 @@ import './App.css';
 // import UseMapDemo from './hooks/useMap/UseMap.demo';
 // import UseListDemo from './hooks/useList/UseList.demo';
 // import UseEffectOnceDemo from './hooks/useUpdateEffectOnce/UseUpdateEffectOnce.demo';
-
+import UseReactState from './hooks/useReactState/UseReactState.demo';
 function App() {
   const [value, setValue] = React.useState('');
-  const derValue = useDeferredValue(value)
+  const derValue = useDeferredValue(value);
   return (
     <div className="App">
       {/* <UseEffectOnceDemo /> */}
-      <input placeholder="please input something" onChange={(e) => setValue(e.target.value)}/>
+      {/* <input placeholder="please input something" onChange={(e) => setValue(e.target.value)}/> */}
 
-      <LongList derValue={derValue}/>
+      {/* <LongList derValue={derValue}/> */}
+      <UseReactState />
     </div>
   );
 }
 
 export default App;
 
-const LongList = memo(({derValue}: {derValue: string}) => {
-
-
-  return   <ul>
-      {Array(50000).fill('a').map((item, index) => (
-        <li key={index}>{derValue}</li>
-      ))}
+const LongList = memo(({ derValue }: { derValue: string }) => {
+  return (
+    <ul>
+      {Array(50000)
+        .fill('a')
+        .map((item, index) => (
+          <li key={index}>{derValue}</li>
+        ))}
     </ul>
-})
+  );
+});

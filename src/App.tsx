@@ -19,10 +19,16 @@ import './App.css';
 // import UseEffectOnceDemo from './hooks/useUpdateEffectOnce/UseUpdateEffectOnce.demo';
 // import UseReactState from './hooks/useReactState/UseReactState.demo';
 import UseTimeoutDemo from './hooks/useTimeoutFn/index.demo';
-
+import deepEqual from './functions/deepEqual';
 function App() {
   const [value, setValue] = React.useState('');
   const derValue = useDeferredValue(value);
+  const test = deepEqual(
+    { name: 1, age: [1, 2, 4] },
+    { name: 1, age: [1, 2, 3] }
+  );
+  console.log(test);
+
   return (
     <div className="App">
       <UseTimeoutDemo />

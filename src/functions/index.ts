@@ -1,16 +1,18 @@
-import isBrowser from "./isBrowser"
-import isBlanks from "./isBlanks"
+import isBrowser from './isBrowser';
+import isBlanks from './isBlanks';
 
 export const isObject = (value: unknown): value is Record<any, any> =>
-  value !== null && typeof value === 'object';
-export const isFunction = (value: unknown): value is Function => typeof value === 'function';
+  Object.prototype.toString.call(value).slice(8, -1).toLowerCase() === 'object';
+export const isFunction = (value: unknown): value is Function =>
+  typeof value === 'function';
 
-export const isString = (value: unknown): value is string => typeof value === 'string';
-export const isBoolean = (value: unknown): value is boolean => typeof value === 'boolean';
-export const isNumber = (value: unknown): value is number => typeof value === 'number';
-export const isUndef = (value: unknown): value is undefined => typeof value === 'undefined';
+export const isString = (value: unknown): value is string =>
+  typeof value === 'string';
+export const isBoolean = (value: unknown): value is boolean =>
+  typeof value === 'boolean';
+export const isNumber = (value: unknown): value is number =>
+  typeof value === 'number';
+export const isUndef = (value: unknown): value is undefined =>
+  typeof value === 'undefined';
 
-export {
-  isBrowser,
-  isBlanks,
-}
+export { isBrowser, isBlanks };

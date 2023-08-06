@@ -1,5 +1,6 @@
 import React, { memo, useDeferredValue } from 'react';
 import './App.css';
+
 // import { FrequencyMap } from "./functions/FrequencyMap"
 // import TestUseBattery from "./hooks/useBattery/UseBattery.demo"
 // import UseHoverDemo from './hooks/useHover/UseHover.demo';

@@ -10,6 +10,7 @@ export default function Demo() {
 
   const [isReady, cancel, reset] = useTimeoutFn(fn, 5000);
   const cancelButtonClick = React.useCallback(() => {
+    debugger;
     if (isReady() === false) {
       cancel();
       setState(`cancelled`);
@@ -29,12 +30,11 @@ export default function Demo() {
           : 'Timer cancelled'}
       </div>
       <button onClick={cancelButtonClick}>
-        {' '}
         {readyState === false ? 'cancel' : 'restart'} timeout
       </button>
       <br />
       <div>
-        Function state:{' '}
+        Function state:
         {readyState === false ? 'Pending' : readyState ? 'Called' : 'Cancelled'}
       </div>
       <div>{state}</div>

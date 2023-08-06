@@ -2,10 +2,12 @@
 
 
 # Dependency directories
-node_modules/
+node_modules
 node_modules/.cache
 .vscode
-./.idea
+.idea
 /package-lock.json
 /yarn.lock
 /.history
+.gitignore
+node_modules/.cache/.eslintcache

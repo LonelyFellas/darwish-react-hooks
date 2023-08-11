@@ -18,20 +18,26 @@ import './App.css';
 // import UseListDemo from './hooks/useList/UseList.demo';
 // import UseEffectOnceDemo from './hooks/useUpdateEffectOnce/UseUpdateEffectOnce.demo';
 // import UseReactState from './hooks/useReactState/UseReactState.demo';
-import UseTimeoutDemo from './hooks/useTimeoutFn/index.demo';
-import deepEqual from './functions/deepEqual';
+// import UseTimeoutDemo from './hooks/useTimeoutFn/index.demo';
+// import UseScrollDemo from './hooks/useScroll/index.demo';
+import UseAsyncDemo from './hooks/useAsync/index.demo';
 function App() {
-  const [value, setValue] = React.useState('');
-  const derValue = useDeferredValue(value);
-  const test = deepEqual(
-    { name: 1, age: [1, 2, 4] },
-    { name: 1, age: [1, 2, 3] }
-  );
-  console.log(test);
-
   return (
-    <div className="App">
-      <UseTimeoutDemo />
+    <div
+      className="App"
+      style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}
+    >
+      <div
+        style={{
+          width: '300px',
+          height: '300px',
+          padding: '20px',
+          overflow: 'auto',
+          border: '1px solid red',
+        }}
+      >
+        <UseAsyncDemo />
+      </div>
     </div>
   );
 }

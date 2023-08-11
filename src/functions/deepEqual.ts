@@ -46,6 +46,10 @@ export function deepEqualByObject<T extends Record<any, any>>(lfs: T, rfs: T) {
   return true;
 }
 export function deepEqualByArray<T extends any[]>(lfs: T[], rfs: T[]) {
+  if (lfs.length !== rfs.length) {
+    return false;
+  }
+  
   lfs.sort();
   rfs.sort();
   for (let i = 0; i < lfs.length; i++) {

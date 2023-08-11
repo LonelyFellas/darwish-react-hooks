@@ -20,8 +20,18 @@ import './App.css';
 // import UseReactState from './hooks/useReactState/UseReactState.demo';
 // import UseTimeoutDemo from './hooks/useTimeoutFn/index.demo';
 // import UseScrollDemo from './hooks/useScroll/index.demo';
-import UseAsyncDemo from './hooks/useAsync/index.demo';
+// import UseAsyncDemo from './hooks/useAsync/index.demo';
+import filterUselessKeyValue from './functions/filterUselessKeyValue';
 function App() {
+  const obj = {
+    name: 'darwish',
+    age: null,
+    hobby: 'coding',
+    address: undefined,
+    phone: '123456789',
+    email: '',
+  };
+  console.log(filterUselessKeyValue(obj));
   return (
     <div
       className="App"
@@ -35,9 +45,7 @@ function App() {
           overflow: 'auto',
           border: '1px solid red',
         }}
-      >
-        <UseAsyncDemo />
-      </div>
+      ></div>
     </div>
   );
 }

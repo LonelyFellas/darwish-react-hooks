@@ -21,17 +21,38 @@ import './App.css';
 // import UseTimeoutDemo from './hooks/useTimeoutFn/index.demo';
 // import UseScrollDemo from './hooks/useScroll/index.demo';
 // import UseAsyncDemo from './hooks/useAsync/index.demo';
+import deepMerge from './functions/deepMerge';
 import filterUselessKeyValue from './functions/filterUselessKeyValue';
 function App() {
-  const obj = {
-    name: 'darwish',
-    age: null,
-    hobby: 'coding',
-    address: undefined,
-    phone: '123456789',
-    email: '',
+  const x = {
+    record: {
+      prop1: 'value1',
+      prop2: 'value2',
+    },
+    array: [1, 2, 3],
+    set: new Set([1, 2, 3]),
+    map: new Map([
+      ['key1', 'value1'],
+      ['key2', 'value2'],
+    ]),
   };
-  console.log(filterUselessKeyValue(obj));
+
+  const y = {
+    record: {
+      prop1: 'changed',
+      prop3: 'value3',
+    },
+    array: [2, 3, 4],
+    set: new Set([2, 3, 4]),
+    map: new Map([
+      ['key2', 'changed'],
+      ['key3', 'value3'],
+    ]),
+  };
+
+  const merged = deepMerge(x, y);
+  console.log(merged);
+
   return (
     <div
       className="App"

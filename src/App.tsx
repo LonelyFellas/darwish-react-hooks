@@ -21,8 +21,10 @@ import './App.css';
 // import UseTimeoutDemo from './hooks/useTimeoutFn/index.demo';
 // import UseScrollDemo from './hooks/useScroll/index.demo';
 // import UseAsyncDemo from './hooks/useAsync/index.demo';
+import useVirtualList from './hooks/useVirtualList';
 import deepMerge from './functions/deepMerge';
 import filterUselessKeyValue from './functions/filterUselessKeyValue';
+import UseVirtualList from './hooks/useVirtualList/index.demo';
 function App() {
   const x = {
     record: {
@@ -50,23 +52,9 @@ function App() {
     ]),
   };
 
-  const merged = deepMerge(x, y);
-  console.log(merged);
-
   return (
-    <div
-      className="App"
-      style={{ display: 'flex', justifyContent: 'center', marginTop: '5rem' }}
-    >
-      <div
-        style={{
-          width: '300px',
-          height: '300px',
-          padding: '20px',
-          overflow: 'auto',
-          border: '1px solid red',
-        }}
-      ></div>
+    <div className="App">
+      <UseVirtualList />
     </div>
   );
 }

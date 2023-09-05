@@ -26,12 +26,7 @@ const UseListDemo = () => {
       <button onClick={() => updateAt(1, Date.now())}>
         Update value at index 1
       </button>
-      <button onClick={() => updateFirst(Date.now())}>
-      updateFirst
-      </button>
-      <button onClick={() => insertAt(1, Date.now())}>
-        insertAt
-      </button>
+      <button onClick={() => insertAt(1, Date.now())}>insertAt</button>
       <button onClick={() => removeAt(1)}>Remove element at index 1</button>
       <button onClick={() => filter((item) => item % 2 === 0)}>
         Filter even values

@@ -1,6 +1,5 @@
 import React, { memo, useDeferredValue } from 'react';
 import './App.css';
-
 // import { FrequencyMap } from "./functions/FrequencyMap"
 // import TestUseBattery from "./hooks/useBattery/UseBattery.demo"
 // import UseHoverDemo from './hooks/useHover/UseHover.demo';
@@ -15,7 +14,7 @@ import './App.css';
 // import UseToggleDemo from './hooks/useToggle/UseToggle.demo';
 // import UseSetStateDemo from './hooks/useSetState/UseSetState.demo';
 // import UseMapDemo from './hooks/useMap/UseMap.demo';
-// import UseListDemo from './hooks/useList/UseList.demo';
+import UseListDemo from './hooks/useList/UseList.demo';
 // import UseEffectOnceDemo from './hooks/useUpdateEffectOnce/UseUpdateEffectOnce.demo';
 // import UseReactState from './hooks/useReactState/UseReactState.demo';
 // import UseTimeoutDemo from './hooks/useTimeoutFn/index.demo';
@@ -54,7 +53,8 @@ function App() {
 
   return (
     <div className="App">
-      <UseVirtualList />
+      {/* <UseVirtualList /> */}
+      <UseListDemo />
     </div>
   );
 }

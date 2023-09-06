@@ -1,19 +1,16 @@
 import React, { memo } from 'react';
 import './App.css';
 import Store from './darwish-class-store';
-import useKey from './hooks/useKey';
+import useTextSelection from './hooks/useTextSelection';
+// import useKey from './hooks/useKey';
 function App() {
-  const [count, setCount] = React.useState(0);
-  const increment = (type: 'up' | 'down') => () => {
-    console.log(type);
-
-    setCount((prev) => prev + (type === 'up' ? 1 : -1));
-  };
-  useKey('ArrowUp', increment('up'));
-  useKey('ArrowDown', increment('down'));
+  const { text } = useTextSelection();
   return (
     <div className="App">
-      <h1>count: {count}</h1>
+      <h1>first-area: dfsdfsdfsdfsdfsdfsfdfs</h1>
+      <h1>second-area: uubvifgndfngdifgdnfg</h1>
+      <h1>third-area: 短发短发啥地方啥地方是的</h1>
+      <h1>result: {text}</h1>
     </div>
   );
 }

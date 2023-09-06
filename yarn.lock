@@ -3551,10 +3551,10 @@
   "resolved" "https://registry.npmmirror.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz"
   "version" "1.0.8"
 
-"darwish@^0.0.19":
-  "integrity" "sha512-4BDrhcvYEL7LTk/hK/6VvU9Jzc9AOjkAR5FDhH3uy044dAGyJhPO/mNA/ZZ6kZtzj6mUxUFH48URRieyau1Hag=="
-  "resolved" "https://registry.npmmirror.com/darwish/-/darwish-0.0.19.tgz"
-  "version" "0.0.19"
+"darwish@^0.0.20":
+  "integrity" "sha512-ciLC9srlNVxSg5C+ZkKLzwYAtDIegM0CNDDAoQ33KA+Ca9YSL95M7/HVT92os4W+HvzOI1Uio/z1ufbJL9L1nQ=="
+  "resolved" "https://registry.npmjs.org/darwish/-/darwish-0.0.20.tgz"
+  "version" "0.0.20"
   dependencies:
     "immer" "^10.0.2"
 

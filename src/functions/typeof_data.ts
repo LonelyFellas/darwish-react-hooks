@@ -14,8 +14,8 @@ type AnyType =
   | 'symbol'
   | 'date'
   | 'function'
-  | 'RegExp'
-  | 'Set';
+  | 'regExp'
+  | 'set';
 export default function typeof_data(data: unknown): AnyType {
   try {
     return Object.prototype.toString
@@ -26,4 +26,3 @@ export default function typeof_data(data: unknown): AnyType {
     return 'null';
   }
 }
-

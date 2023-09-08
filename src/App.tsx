@@ -2,20 +2,16 @@ import React, { memo, useCallback, useState } from 'react';
 import './App.css';
 import useCookie from './hooks/useCookie';
 import useSet from './hooks/useSet';
-function App() {
-  const [set, { add, has, remove, toggle, reset }] = useSet(['hello']);
+import deepEqual from './functions/deepEqual';
+import typeof_data from './functions/typeof_data';
 
-  return (
-    <div className="App">
-      <button onClick={() => add(String(Date.now()))}>Add</button>
-      <button onClick={() => reset()}>Reset</button>
-      <button onClick={() => remove('hello')} disabled={!has('hello')}>
-        Remove 'hello'
-      </button>
-      <button onClick={() => toggle('hello')}>Toggle hello</button>
-      <pre>{JSON.stringify(Array.from(set), null, 2)}</pre>
-    </div>
-  );
+function App() {
+  const date1 = new Date('2002-01-01');
+  const date2 = new Date('2002-01-01');
+  const dataNull = Symbol(1);
+  console.log(typeof_data(dataNull));
+
+  return <div className="App"></div>;
 }
 
 export default App;

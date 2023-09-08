@@ -1,16 +1,19 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import './App.css';
-import Store from './darwish-class-store';
-import useTextSelection from './hooks/useTextSelection';
-// import useKey from './hooks/useKey';
+import useCookie from './hooks/useCookie';
+import useSet from './hooks/useSet';
 function App() {
-  const { text } = useTextSelection();
+  const [set, { add, has, remove, toggle, reset }] = useSet(['hello']);
+
   return (
     <div className="App">
-      <h1>first-area: dfsdfsdfsdfsdfsdfsfdfs</h1>
-      <h1>second-area: uubvifgndfngdifgdnfg</h1>
-      <h1>third-area: 短发短发啥地方啥地方是的</h1>
-      <h1>result: {text}</h1>
+      <button onClick={() => add(String(Date.now()))}>Add</button>
+      <button onClick={() => reset()}>Reset</button>
+      <button onClick={() => remove('hello')} disabled={!has('hello')}>
+        Remove 'hello'
+      </button>
+      <button onClick={() => toggle('hello')}>Toggle hello</button>
+      <pre>{JSON.stringify(Array.from(set), null, 2)}</pre>
     </div>
   );
 }
